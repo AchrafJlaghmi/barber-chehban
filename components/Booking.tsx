@@ -12,11 +12,40 @@ export default function Booking({ dict }: { dict?: any }) {
     firstName: "",
     phone: "",
     barber: "Peu importe",
-    slot: "",
+    date: "",
+    time: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
+
+  const isEn = dict?.booking?.form?.submit?.toLowerCase().includes('confirm');
+  const locale = isEn ? 'en-US' : 'fr-FR';
+
+  const availableDays = [];
+  const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long' };
+  
+  for (let i = 0; i < 14; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() + i);
+    
+    const label = d.toLocaleDateString(locale, options);
+    const capitalizedLabel = label.charAt(0).toUpperCase() + label.slice(1);
+    
+    const valOptions: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long' };
+    const val = d.toLocaleDateString(locale, valOptions);
+    
+    availableDays.push({
+      value: val,
+      label: capitalizedLabel,
+    });
+  }
+
+  const timeSlots = [
+    "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", 
+    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", 
+    "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"
+  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -27,8 +56,10 @@ export default function Booking({ dict }: { dict?: any }) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const { firstName, phone, barber, slot } = formData;
-    const message = `Bonjour, je voudrais réserver avec ${barber} pour le créneau suivant: ${slot}. Prénom: ${firstName}. Tél: ${phone}`;
+    const { firstName, phone, barber, date, time } = formData;
+    const message = isEn
+      ? `Hello, I would like to book an appointment with ${barber} on ${date} at ${time}. Name: ${firstName}. Phone: ${phone}`
+      : `Bonjour, je voudrais réserver avec ${barber} le ${date} à ${time}. Prénom: ${firstName}. Tél: ${phone}`;
     
     const whatsappUrl = `https://wa.me/212602630847?text=${encodeURIComponent(message)}`;
 
@@ -137,7 +168,7 @@ export default function Booking({ dict }: { dict?: any }) {
               </div>
 
               {/* Field: Choix du Barbier */}
-              <div className="relative group">
+              <div className="relative group md:col-span-2">
                 <div className={`absolute inset-0 bg-gold/5 rounded-2xl transition-all duration-500 blur-xl ${focusedField === 'barber' ? 'opacity-100' : 'opacity-0'}`} />
                 <div className={`relative flex items-center bg-dark/60 rounded-2xl border transition-all duration-300 overflow-hidden ${focusedField === 'barber' ? 'border-gold shadow-[0_0_20px_rgba(201,147,58,0.15)]' : 'border-white/10 hover:border-white/20'}`}>
                   <div className="pl-6 pr-4 text-gold/60">
@@ -145,7 +176,7 @@ export default function Booking({ dict }: { dict?: any }) {
                   </div>
                   <div className="flex-grow relative py-3 pr-6">
                     <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
-                      Barbier
+                      {dict?.booking?.form?.barber || "Barbier"}
                     </label>
                     <select
                       name="barber"
@@ -155,7 +186,7 @@ export default function Booking({ dict }: { dict?: any }) {
                       value={formData.barber}
                       className="w-full bg-transparent text-cream pt-4 pb-1 outline-none font-body appearance-none cursor-pointer"
                     >
-                      <option className="bg-dark text-cream" value="Peu importe">Peu importe (Premier dispo)</option>
+                      <option className="bg-dark text-cream" value="Peu importe">{dict?.booking?.form?.barber_any || "Peu importe (Premier dispo)"}</option>
                       <option className="bg-dark text-cream" value="Mehdi">Mehdi</option>
                       <option className="bg-dark text-cream" value="Achraf">Achraf</option>
                     </select>
@@ -163,27 +194,64 @@ export default function Booking({ dict }: { dict?: any }) {
                 </div>
               </div>
 
-              {/* Field: Créneau Souhaité */}
+              {/* Field: Date Souhaitée */}
               <div className="relative group">
-                <div className={`absolute inset-0 bg-gold/5 rounded-2xl transition-all duration-500 blur-xl ${focusedField === 'slot' ? 'opacity-100' : 'opacity-0'}`} />
-                <div className={`relative flex items-center bg-dark/60 rounded-2xl border transition-all duration-300 overflow-hidden ${focusedField === 'slot' ? 'border-gold shadow-[0_0_20px_rgba(201,147,58,0.15)]' : 'border-white/10 hover:border-white/20'}`}>
+                <div className={`absolute inset-0 bg-gold/5 rounded-2xl transition-all duration-500 blur-xl ${focusedField === 'date' ? 'opacity-100' : 'opacity-0'}`} />
+                <div className={`relative flex items-center bg-dark/60 rounded-2xl border transition-all duration-300 overflow-hidden ${focusedField === 'date' ? 'border-gold shadow-[0_0_20px_rgba(201,147,58,0.15)]' : 'border-white/10 hover:border-white/20'}`}>
+                  <div className="pl-6 pr-4 text-gold/60">
+                    <CalendarClock size={20} />
+                  </div>
+                  <div className="flex-grow relative py-3 pr-6">
+                    <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
+                      {isEn ? "Desired Date" : "Date Souhaitée"}
+                    </label>
+                    <select
+                      name="date"
+                      required
+                      onFocus={() => setFocusedField('date')}
+                      onBlur={() => setFocusedField(null)}
+                      onChange={handleChange}
+                      value={formData.date}
+                      className="w-full bg-transparent text-cream pt-4 pb-1 outline-none font-body appearance-none cursor-pointer"
+                    >
+                      <option className="bg-dark text-cream" value="">{isEn ? "Select a day" : "Choisir un jour"}</option>
+                      {availableDays.map((day) => (
+                        <option key={day.value} className="bg-dark text-cream" value={day.value}>
+                          {day.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Field: Heure Souhaitée */}
+              <div className="relative group">
+                <div className={`absolute inset-0 bg-gold/5 rounded-2xl transition-all duration-500 blur-xl ${focusedField === 'time' ? 'opacity-100' : 'opacity-0'}`} />
+                <div className={`relative flex items-center bg-dark/60 rounded-2xl border transition-all duration-300 overflow-hidden ${focusedField === 'time' ? 'border-gold shadow-[0_0_20px_rgba(201,147,58,0.15)]' : 'border-white/10 hover:border-white/20'}`}>
                   <div className="pl-6 pr-4 text-gold/60">
                     <Clock size={20} />
                   </div>
-                  <div className="flex-grow relative py-3">
-                    <label className={`absolute left-0 transition-all duration-300 pointer-events-none text-cream/50 font-medium ${formData.slot || focusedField === 'slot' ? 'text-[10px] -translate-y-2 uppercase tracking-wider text-gold' : 'text-sm translate-y-2'}`}>
-                      Date & Heure Souhaitée
+                  <div className="flex-grow relative py-3 pr-6">
+                    <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
+                      {isEn ? "Desired Time" : "Heure Souhaitée"}
                     </label>
-                    <input
-                      type="datetime-local"
-                      name="slot"
+                    <select
+                      name="time"
                       required
-                      onFocus={() => setFocusedField('slot')}
+                      onFocus={() => setFocusedField('time')}
                       onBlur={() => setFocusedField(null)}
                       onChange={handleChange}
-                      value={formData.slot}
-                      className="w-full bg-transparent text-cream pt-4 pb-1 outline-none font-body"
-                    />
+                      value={formData.time}
+                      className="w-full bg-transparent text-cream pt-4 pb-1 outline-none font-body appearance-none cursor-pointer"
+                    >
+                      <option className="bg-dark text-cream" value="">{isEn ? "Select a time" : "Choisir l'heure"}</option>
+                      {timeSlots.map((slot) => (
+                        <option key={slot} className="bg-dark text-cream" value={slot}>
+                          {slot}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               </div>
