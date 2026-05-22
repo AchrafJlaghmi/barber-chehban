@@ -15,13 +15,13 @@ export default function Team({ dict }: { dict?: any }) {
     {
       id: "mehdi",
       name: "Mehdi",
-      role: "Maître Barbier / Styliste",
+      role: "Maître Barbier",
       image: "/IMG-20260425-WA0002.jpg",
     },
     {
       id: "achraf",
       name: "Achraf",
-      role: "Artiste Barbier / Expert Rasage",
+      role: "Maître Barbier",
       image: "/505956958_18054089456601412_797208376682842370_n.jpg",
     },
   ];

@@ -156,8 +156,8 @@ export default function Booking({ dict }: { dict?: any }) {
                       className="w-full bg-transparent text-cream pt-4 pb-1 outline-none font-body appearance-none cursor-pointer"
                     >
                       <option className="bg-dark text-cream" value="Peu importe">Peu importe (Premier dispo)</option>
-                      <option className="bg-dark text-cream" value="Mehdi">Mehdi - Maître Barbier</option>
-                      <option className="bg-dark text-cream" value="Achraf">Achraf - Expert Rasage</option>
+                      <option className="bg-dark text-cream" value="Mehdi">Mehdi</option>
+                      <option className="bg-dark text-cream" value="Achraf">Achraf</option>
                     </select>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function Booking({ dict }: { dict?: any }) {
                       Date & Heure Souhaitée
                     </label>
                     <input
-                      type="text"
+                      type="datetime-local"
                       name="slot"
                       required
                       onFocus={() => setFocusedField('slot')}
