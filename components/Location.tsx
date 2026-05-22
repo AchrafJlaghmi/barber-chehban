@@ -82,7 +82,7 @@ export default function Location({ dict }: { dict?: any }) {
             {/* Navigation CTA */}
             <div className="mt-10">
               <a
-                href="https://maps.google.com/?q=31.6155551,-8.0617945"
+                href="https://maps.app.goo.gl/KZpG3ALGDCPT68gw5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-cream/70 hover:text-gold transition-colors group"
@@ -97,7 +97,7 @@ export default function Location({ dict }: { dict?: any }) {
           <div className="lg:col-span-7 w-full h-[450px] relative rounded-3xl overflow-hidden gold-border-glow bg-charcoal">
             {/* Google Maps embed iframe */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.6575791334863!2d-8.0673322!3d31.6158223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM2JzU3LjAiTiA4wrAwNCcwMi40Ilc!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.6575791334863!2d-8.066170!3d31.636321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM4JzEwLjgiTiA4wrAwMyc1OC4yIlc!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma"
               width="100%"
               height="100%"
               style={{ border: 0 }}
