@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #C9933A;
+    --dark: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --cream: #F5EFE0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #0D0D0D;
+    color: #F5EFE0;
+  }
+
+  body {
+    background-color: #0D0D0D;
+    color: #F5EFE0;
+    overflow-x: hidden;
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D0D0D;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1A1A1A;
+    border-radius: 4px;
+    border: 2px solid #0D0D0D;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9933A;
+  }
+}
+
+/* Luxury Utilities & Glow Effects */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF 0%, #C9933A 50%, #8E6523 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px rgba(201, 147, 58, 0.05);
+  border: 1px solid rgba(201, 147, 58, 0.15);
+}
+
+.gold-border-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(201, 147, 58, 0.15);
+  border: 1px solid rgba(201, 147, 58, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel {
+  background: rgba(13, 13, 13, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.glass-panel-gold {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 147, 58, 0.1);
+}
+
+/* Custom animations for checking services */
+@keyframes checkmark-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-checkmark {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: checkmark-draw 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* High-Performance Hardware Accelerated Animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.02); }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.will-change-transform {
+  will-change: transform, opacity;
+}

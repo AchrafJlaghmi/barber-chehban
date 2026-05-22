@@ -1,0 +1,110 @@
+{
+  "navigation": {
+    "prestations": "Prestations",
+    "offres": "Offres",
+    "equipe": "Équipe",
+    "galerie": "Galerie",
+    "reserver": "Réserver",
+    "whatsapp": "Réserver sur WhatsApp",
+    "location": "Marrakech, Massira 2"
+  },
+  "hero": {
+    "tagline": "Premium Barbershop Marrakech",
+    "headline": "L'art du détail.",
+    "subheadline": "Your premium grooming experience. L'excellence de la coiffure et du rasage traditionnel au cœur de Marrakech.",
+    "cta_whatsapp": "Réserver sur WhatsApp",
+    "cta_prestations": "Voir nos prestations",
+    "badge_coupe": "Coupe Stylée",
+    "badge_barbe": "Taille Barbe",
+    "badge_pack": "Pack Complet",
+    "currency": "DH"
+  },
+  "services": {
+    "subtitle": "Nos Prestations",
+    "title": "L'Art du Grooming",
+    "desc": "Découvrez notre carte de services premium. De la coupe classique au rasage à l'ancienne, chaque prestation est une expérience sur mesure.",
+    "list": {
+      "coupe": {
+        "name": "Coupe Stylée",
+        "desc": "Consultation visagiste, shampoing, coupe sur mesure aux ciseaux ou tondeuse, finition et coiffage premium."
+      },
+      "barbe": {
+        "name": "Taille de Barbe",
+        "desc": "Traçage précis, taille aux ciseaux, rasage des contours au coupe-choux, application d'huile nourrissante."
+      },
+      "proteine": {
+        "name": "Soin Protéine",
+        "desc": "Soin profond réparateur et lissant pour des cheveux soyeux, brillants et parfaitement disciplinés."
+      },
+      "gommage": {
+        "name": "Gommage Visage",
+        "desc": "Exfoliation douce pour éliminer les cellules mortes, purifier les pores et raviver le teint, complétée par un massage."
+      }
+    }
+  },
+  "pack": {
+    "tagline": "Offre Signature",
+    "title": "Le Pack Complet",
+    "desc": "L'expérience de grooming ultime. Un moment de détente absolue combinant tous nos soins experts pour un résultat parfait.",
+    "price": "200 DH",
+    "includes": [
+      "Soin Protéine Réparateur",
+      "Coupe Stylée & Coiffage",
+      "Gommage Visage Purifiant"
+    ],
+    "cta": "Réserver ce Pack"
+  },
+  "philosophy": {
+    "subtitle": "Notre Philosophie",
+    "title": "L'Héritage du Savoir-Faire",
+    "desc1": "Chez Barber Chehban, nous ne faisons pas que couper des cheveux. Nous perpétuons une tradition d'excellence où chaque détail compte.",
+    "desc2": "Notre salon à Massira 2 est pensé comme un véritable club pour gentlemen contemporains. Un lieu où l'expertise technique rencontre un service irréprochable dans une atmosphère luxueuse et détendue.",
+    "cta": "Découvrir notre histoire"
+  },
+  "team": {
+    "subtitle": "L'Expertise",
+    "title": "Nos Maîtres Barbiers",
+    "desc": "Des artisans passionnés, maîtres dans l'art de la coupe et du rasage traditionnel. Découvrez les talents qui prendront soin de vous."
+  },
+  "gallery": {
+    "subtitle": "Portfolio",
+    "title": "Nos Réalisations",
+    "desc": "Une sélection de nos dernières coupes et tailles de barbe. L'excellence de notre savoir-faire en images.",
+    "view": "Voir"
+  },
+  "location": {
+    "subtitle": "Nous Trouver",
+    "title": "Le Salon",
+    "desc": "Situé au cœur de Massira 2, notre salon vous accueille dans un cadre élégant et masculin, pensé pour votre plus grand confort.",
+    "address": "Adresse",
+    "address_val": "Près de Dar Chifaa, Massira 2\nMarrakech 40140",
+    "hours": "Horaires",
+    "schedule1": "Lundi – Samedi",
+    "schedule2": "Dimanche",
+    "contact": "Contact",
+    "get_directions": "Obtenir l'itinéraire"
+  },
+  "booking": {
+    "subtitle": "Prendre RDV",
+    "title": "Réserver un Créneau",
+    "desc": "Connectez-vous directement avec notre équipe via WhatsApp pour une confirmation en temps réel. L'excellence n'attend pas.",
+    "form": {
+      "firstname": "Votre Prénom",
+      "phone": "Téléphone (+212...)",
+      "barber": "Barbier",
+      "barber_any": "Peu importe (Premier dispo)",
+      "barber_mehdi": "Mehdi - Maître Barbier",
+      "barber_achraf": "Achraf - Expert Rasage",
+      "slot": "Date & Heure Souhaitée",
+      "submit": "Confirmer la Réservation",
+      "submitting": "Connexion WhatsApp...",
+      "whatsapp_message": "Bonjour, je voudrais réserver avec {barber} pour le créneau suivant: {slot}. Prénom: {name}. Tél: {phone}"
+    }
+  },
+  "footer": {
+    "desc": "L'adresse incontournable pour les gentlemen exigeants à Marrakech. Coupe, barbe et soins dans un cadre premium.",
+    "quick_links": "Liens Rapides",
+    "contact": "Contact",
+    "rights": "Tous droits réservés."
+  }
+}
