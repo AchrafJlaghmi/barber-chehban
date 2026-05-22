@@ -182,6 +182,7 @@ export default function Hero({ dict }: { dict: any }) {
                     sizes="(max-w-768px) 100vw, 420px"
                     className="object-cover filter brightness-95 contrast-105"
                     priority
+                    fetchPriority="high"
                   />
                 </motion.div>
               </AnimatePresence>

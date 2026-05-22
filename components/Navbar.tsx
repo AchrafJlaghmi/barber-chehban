@@ -47,7 +47,7 @@ export default function Navbar({ dict }: { dict: any }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
+            <a href="#" aria-label="Home" className="flex items-center gap-3 group">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold/30 group-hover:border-gold transition-all duration-300">
                 <Image
                   src="/670955404_18083263373105000_3784697678322248313_n.jpg"

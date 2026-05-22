@@ -21,7 +21,7 @@ export default function Footer({ dict }: { dict?: any }) {
           
           {/* Brand Col */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <a href="#" className="flex items-center gap-3 mb-6 group">
+            <a href="#" aria-label="Home" className="flex items-center gap-3 mb-6 group">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold/30 group-hover:border-gold transition-all duration-300">
                 <Image
                   src="/670955404_18083263373105000_3784697678322248313_n.jpg"
@@ -78,6 +78,7 @@ export default function Footer({ dict }: { dict?: any }) {
                   href="https://www.instagram.com/barber____chehbaan/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Instagram"
                   className="flex items-center gap-3 text-xs text-cream/70 hover:text-gold transition-colors group"
                 >
                   <div className="w-8 h-8 rounded-full bg-charcoal flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-300">
@@ -91,6 +92,7 @@ export default function Footer({ dict }: { dict?: any }) {
                   href="https://www.tiktok.com/@mahdi_jm1"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="TikTok"
                   className="flex items-center gap-3 text-xs text-cream/70 hover:text-gold transition-colors group"
                 >
                   <div className="w-8 h-8 rounded-full bg-charcoal flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-dark transition-all duration-300">

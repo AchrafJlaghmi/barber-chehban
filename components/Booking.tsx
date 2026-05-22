@@ -125,10 +125,11 @@ export default function Booking({ dict }: { dict?: any }) {
                     <User size={20} />
                   </div>
                   <div className="flex-grow relative py-3">
-                    <label className={`absolute left-0 transition-all duration-300 pointer-events-none text-cream/50 font-medium ${formData.firstName || focusedField === 'firstName' ? 'text-[10px] -translate-y-2 uppercase tracking-wider text-gold' : 'text-sm translate-y-2'}`}>
+                    <label htmlFor="firstName" className={`absolute left-0 transition-all duration-300 pointer-events-none text-cream/50 font-medium ${formData.firstName || focusedField === 'firstName' ? 'text-[10px] -translate-y-2 uppercase tracking-wider text-gold' : 'text-sm translate-y-2'}`}>
                       Votre Prénom
                     </label>
                     <input
+                      id="firstName"
                       type="text"
                       name="firstName"
                       required
@@ -150,10 +151,11 @@ export default function Booking({ dict }: { dict?: any }) {
                     <Phone size={20} />
                   </div>
                   <div className="flex-grow relative py-3">
-                    <label className={`absolute left-0 transition-all duration-300 pointer-events-none text-cream/50 font-medium ${formData.phone || focusedField === 'phone' ? 'text-[10px] -translate-y-2 uppercase tracking-wider text-gold' : 'text-sm translate-y-2'}`}>
+                    <label htmlFor="phone" className={`absolute left-0 transition-all duration-300 pointer-events-none text-cream/50 font-medium ${formData.phone || focusedField === 'phone' ? 'text-[10px] -translate-y-2 uppercase tracking-wider text-gold' : 'text-sm translate-y-2'}`}>
                       Téléphone (+212...)
                     </label>
                     <input
+                      id="phone"
                       type="tel"
                       name="phone"
                       required
@@ -175,10 +177,11 @@ export default function Booking({ dict }: { dict?: any }) {
                     <Scissors size={20} />
                   </div>
                   <div className="flex-grow relative py-3 pr-6">
-                    <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
+                    <label htmlFor="barber" className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
                       {dict?.booking?.form?.barber || "Barbier"}
                     </label>
                     <select
+                      id="barber"
                       name="barber"
                       onFocus={() => setFocusedField('barber')}
                       onBlur={() => setFocusedField(null)}
@@ -202,10 +205,11 @@ export default function Booking({ dict }: { dict?: any }) {
                     <CalendarClock size={20} />
                   </div>
                   <div className="flex-grow relative py-3 pr-6">
-                    <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
+                    <label htmlFor="date" className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
                       {isEn ? "Desired Date" : "Date Souhaitée"}
                     </label>
                     <select
+                      id="date"
                       name="date"
                       required
                       onFocus={() => setFocusedField('date')}
@@ -233,10 +237,11 @@ export default function Booking({ dict }: { dict?: any }) {
                     <Clock size={20} />
                   </div>
                   <div className="flex-grow relative py-3 pr-6">
-                    <label className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
+                    <label htmlFor="time" className="absolute left-0 text-[10px] -translate-y-2 uppercase tracking-wider text-gold font-medium">
                       {isEn ? "Desired Time" : "Heure Souhaitée"}
                     </label>
                     <select
+                      id="time"
                       name="time"
                       required
                       onFocus={() => setFocusedField('time')}

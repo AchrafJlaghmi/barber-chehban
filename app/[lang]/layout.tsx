@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import "../globals.css";
 import { i18n, type Locale } from '@/i18n.config';
@@ -19,6 +19,12 @@ const dmsans = DM_Sans({
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1A1A1A",
+};
 
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const isEn = params.lang === 'en';
