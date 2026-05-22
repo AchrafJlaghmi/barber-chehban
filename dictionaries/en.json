@@ -2,7 +2,7 @@
   "navigation": {
     "prestations": "Services",
     "offres": "Offers",
-    "equipe": "Team",
+    "equipe": "The Team",
     "galerie": "Gallery",
     "reserver": "Book",
     "whatsapp": "Book on WhatsApp",
@@ -10,84 +10,84 @@
   },
   "hero": {
     "tagline": "Premium Barbershop Marrakech",
-    "headline": "The art of detail.",
-    "subheadline": "Your premium grooming experience. The excellence of traditional hairdressing and shaving in the heart of Marrakech.",
-    "cta_whatsapp": "Book on WhatsApp",
-    "cta_prestations": "View our services",
-    "badge_coupe": "Stylish Haircut",
-    "badge_barbe": "Beard Trim",
-    "badge_pack": "Full Package",
+    "headline": "The Art of Detail.",
+    "subheadline": "Your premium grooming experience. The pinnacle of modern hairstyling and traditional shaving in the heart of Marrakech.",
+    "cta_whatsapp": "Book via WhatsApp",
+    "cta_prestations": "View Our Services",
+    "badge_coupe": "Bespoke Haircut",
+    "badge_barbe": "Beard Sculpting",
+    "badge_pack": "The Full Package",
     "currency": "MAD"
   },
   "services": {
     "subtitle": "Our Services",
     "title": "The Art of Grooming",
-    "desc": "Discover our premium service menu. From classic haircuts to traditional old-school shaves, every service is a bespoke experience.",
+    "desc": "Discover our premium service menu. From timeless haircuts to classic hot towel shaves, every service is a tailored experience.",
     "list": {
       "coupe": {
-        "name": "Stylish Haircut",
-        "desc": "Consultation, shampoo, tailored scissors or clippers cut, styling and premium finish."
+        "name": "Bespoke Haircut",
+        "desc": "Consultation, refreshing shampoo, precision cut using scissors or clippers, styling, and a premium finish."
       },
       "barbe": {
-        "name": "Beard Trim",
-        "desc": "Precise lining, scissors trim, straight-razor contouring, and nourishing oil application."
+        "name": "Beard Sculpting",
+        "desc": "Precision lining, scissor trimming, straight-razor contouring, and application of nourishing beard oil."
       },
       "proteine": {
         "name": "Protein Treatment",
-        "desc": "Deep repairing and smoothing treatment for silky, shiny, and perfectly disciplined hair."
+        "desc": "Deep repairing and smoothing treatment for silky, glossy, and perfectly manageable hair."
       },
       "gommage": {
-        "name": "Facial Scrub",
-        "desc": "Gentle exfoliation to remove dead cells, purify pores, and revive the complexion, completed with a massage."
+        "name": "Purifying Facial Scrub",
+        "desc": "Gentle exfoliation to remove dead cells, cleanse pores, and brighten your complexion, finished with a relaxing massage."
       }
     }
   },
   "pack": {
     "tagline": "Signature Offer",
-    "title": "The Full Package",
-    "desc": "The ultimate grooming experience. A moment of absolute relaxation combining all our expert treatments for a perfect result.",
+    "title": "The Complete Package",
+    "desc": "The ultimate grooming journey. A moment of pure relaxation combining our finest expert treatments for an immaculate result.",
     "price": "200 MAD",
     "includes": [
       "Repairing Protein Treatment",
-      "Stylish Haircut & Finish",
+      "Bespoke Haircut & Styling",
       "Purifying Facial Scrub"
     ],
-    "cta": "Book this Package"
+    "cta": "Book This Package"
   },
   "philosophy": {
     "subtitle": "Our Philosophy",
     "title": "The Heritage of Craftsmanship",
-    "desc1": "At Barber Chehban, we don't just cut hair. We perpetuate a tradition of excellence where every detail matters.",
-    "desc2": "Our shop in Massira 2 is designed as a true club for modern gentlemen. A place where technical expertise meets flawless service in a luxurious and relaxed atmosphere.",
-    "cta": "Discover our story"
+    "desc1": "At Barber Chehban, we don't just cut hair. We uphold a tradition of absolute excellence where every detail matters.",
+    "desc2": "Our shop in Massira 2 is envisioned as a true modern gentlemen's club. It's a space where technical mastery meets impeccable service in a luxurious, laid-back atmosphere.",
+    "cta": "Discover Our Story"
   },
   "team": {
-    "subtitle": "The Expertise",
-    "title": "Our Master Barbers",
-    "desc": "Passionate artisans, masters in the art of haircutting and traditional shaving. Discover the talents who will take care of you."
+    "subtitle": "Our Expertise",
+    "title": "The Master Barbers",
+    "desc": "Passionate artisans and masters in the art of haircutting and traditional shaving. Meet the talent dedicated to elevating your style."
   },
   "gallery": {
-    "subtitle": "Portfolio",
-    "title": "Our Work",
-    "desc": "A selection of our latest haircuts and beard trims. The excellence of our craftsmanship in pictures.",
+    "subtitle": "The Lookbook",
+    "title": "Our Creations",
+    "desc": "A glimpse into our craftsmanship. Every haircut and treatment is executed with surgical precision for an uncompromising finish.",
     "view": "View"
   },
   "location": {
     "subtitle": "Find Us",
     "title": "The Barbershop",
-    "desc": "Located in the heart of Massira 2, our shop welcomes you in an elegant and masculine setting, designed for your utmost comfort.",
+    "desc": "Located in the heart of Massira 2, our barbershop welcomes you to an elegant, masculine space designed for your utmost comfort.",
     "address": "Address",
     "address_val": "Near Dar Chifaa, Massira 2\nMarrakech 40140",
     "hours": "Opening Hours",
     "schedule1": "Monday – Saturday",
     "schedule2": "Sunday",
     "contact": "Contact",
-    "get_directions": "Get directions"
+    "get_directions": "Get Directions"
   },
   "booking": {
     "subtitle": "Book an Appointment",
-    "title": "Secure your Slot",
-    "desc": "Connect directly with our team via WhatsApp for real-time confirmation. Excellence doesn't wait.",
+    "title": "Reserve Your Slot",
+    "desc": "Connect directly with our team on WhatsApp for instant confirmation. Excellence shouldn't wait.",
     "form": {
       "firstname": "Your First Name",
       "phone": "Phone (+212...)",
@@ -98,11 +98,11 @@
       "slot": "Desired Date & Time",
       "submit": "Confirm Booking",
       "submitting": "Connecting to WhatsApp...",
-      "whatsapp_message": "Hello, I would like to book an appointment with {barber} for: {slot}. Name: {name}. Phone: {phone}"
+      "whatsapp_message": "Hello, I would like to book an appointment with {barber} on {date} at {time}. Name: {name}. Phone: {phone}"
     }
   },
   "footer": {
-    "desc": "The ultimate destination for demanding gentlemen in Marrakech. Haircuts, beards, and treatments in a premium setting.",
+    "desc": "The ultimate destination for discerning gentlemen in Marrakech. Haircuts, beard grooming, and premium treatments in an exclusive setting.",
     "quick_links": "Quick Links",
     "contact": "Contact",
     "rights": "All rights reserved."

@@ -29,14 +29,14 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   const isEn = params.lang === 'en';
   return {
-    title: isEn ? "Barber Chehban | Best Hairdresser & Barber in Marrakech, Massira 2" : "Barber Chehban | Meilleur Coiffeur & Barbier à Marrakech, Massira 2",
-    description: isEn ? "Barber Chehban is the ultimate barbershop in Marrakech (Massira 2). Enjoy stylish haircuts, protein treatments, and expert beard trims by Mehdi and Achraf." : "Barber Chehban est le salon de coiffure et barbier incontournable à Marrakech (Massira 2). Profitez de nos coupes stylées, soins protéine et tailles de barbe expertes par Mehdi et Achraf.",
+    title: isEn ? "Barber Chehban | Premium Barbershop in Marrakech, Massira 2" : "Barber Chehban | Meilleur Coiffeur & Barbier à Marrakech, Massira 2",
+    description: isEn ? "Barber Chehban is the premier barbershop in Marrakech (Massira 2). Experience bespoke haircuts, advanced protein treatments, and expert beard grooming by Mehdi and Achraf." : "Barber Chehban est le salon de coiffure et barbier incontournable à Marrakech (Massira 2). Profitez de nos coupes stylées, soins protéine et tailles de barbe expertes par Mehdi et Achraf.",
     keywords: isEn ? ["barber marrakech", "hairdresser marrakech", "barber massira 2", "best barber marrakech", "barber chehban", "men's haircut marrakech", "protein treatment marrakech", "beard trim marrakech", "men's hair salon massira 2"] : ["barbier marrakech", "coiffeur marrakech", "barber marrakech", "barber massira 2", "meilleur coiffeur marrakech", "barber chehban", "coiffure homme marrakech", "soin proteine marrakech", "taille de barbe marrakech", "salon de coiffure homme massira 2"],
     authors: [{ name: "Barber Chehban" }],
     robots: "index, follow",
     openGraph: {
-      title: isEn ? "Barber Chehban | Best Hairdresser & Barber in Marrakech" : "Barber Chehban | Meilleur Coiffeur & Barbier à Marrakech, Massira 2",
-      description: isEn ? "Barber Chehban is the ultimate barbershop in Marrakech (Massira 2). Premium haircuts, protein treatments, and expert beard trims by our master barbers." : "Barber Chehban est le salon incontournable à Marrakech (Massira 2). Coupes premium, soins protéine et tailles de barbe expertes par nos maîtres barbiers.",
+      title: isEn ? "Barber Chehban | Premium Barbershop in Marrakech" : "Barber Chehban | Meilleur Coiffeur & Barbier à Marrakech, Massira 2",
+      description: isEn ? "Barber Chehban is the premier barbershop in Marrakech (Massira 2). Bespoke haircuts, protein treatments, and expert beard grooming by our master barbers." : "Barber Chehban est le salon incontournable à Marrakech (Massira 2). Coupes premium, soins protéine et tailles de barbe expertes par nos maîtres barbiers.",
       type: "website",
       locale: isEn ? "en_US" : "fr_MA",
       siteName: "Barber Chehban",
